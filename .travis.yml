@@ -7,10 +7,7 @@ install:
   - sudo apt-get update -q
   - sudo apt-get install ruby
   - gem install test-kitchen
-  - sudo apt-get install dkms
-  - wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
-  - sudo sh -c 'echo "deb http://download.virtualbox.org/virtualbox/debian trusty contrib" >> /etc/apt/sources.list.d/virtualbox.list'
-  - sudo apt-get install virtualbox-4.3
+  - sudo apt-get install virtualbox
   - sudo wget -nv https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.4_x86_64.deb
   - sudo dpkg -i vagrant_1.7.4_x86_64.deb
   - bundle install
