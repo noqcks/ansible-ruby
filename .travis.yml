@@ -1,9 +1,13 @@
 ---
 language: ruby
 rvm: 2.2
+sudo: true
 
 install:
   - gem install test-kitchen
+  - sudo apt-get update -q
+  - sudo apt-get install virtualbox
+  - sudo apt-get install vagrant
   - bundle install
 
 script:
