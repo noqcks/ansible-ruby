@@ -1,16 +1,16 @@
 ---
+rvm: 2.2
 sudo: required
-dist: trusty
-language: generic
+services: docker
 
 install:
-  - sudo apt-get update -q
-  - sudo apt-get install ruby
-  - gem install test-kitchen
-  - sudo apt-get install virtualbox
-  - sudo wget -nv https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.4_x86_64.deb
-  - sudo dpkg -i vagrant_1.7.4_x86_64.deb
   - bundle install
 
+# https://github.com/zuazo/kitchen-in-travis-native/issues/1#issuecomment-142455888
+before_script:
+  # - sudo iptables -L DOCKER || sudo iptables -N DOCKER
+
 script:
-  - kitchen test
+- kitchen test
+
+# after_failure: cat docker_daemon.log

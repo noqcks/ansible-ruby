@@ -10,8 +10,6 @@ GEM
       test-kitchen
     kitchen-docker (2.3.0)
       test-kitchen (>= 1.0.0)
-    kitchen-vagrant (0.19.0)
-      test-kitchen (~> 1.4)
     librarian (0.1.2)
       highline
       thor (~> 0.15)
@@ -67,7 +65,6 @@ PLATFORMS
 DEPENDENCIES
   kitchen-ansible
   kitchen-docker
-  kitchen-vagrant
   serverspec
   test-kitchen
 

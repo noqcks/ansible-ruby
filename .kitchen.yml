@@ -1,6 +1,7 @@
 ---
 driver:
-  name: vagrant
+  name: docker
+  privileged: true
 
 provisioner:
   name: ansible_playbook
@@ -12,9 +13,6 @@ provisioner:
 
 platforms:
   - name: ubuntu-14.04
-    driver_plugin: vagrant
-    driver_config:
-      box: ubuntu/trusty64
 
 suites:
   - name: default
