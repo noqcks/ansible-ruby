@@ -7,9 +7,9 @@ provisioner:
   name: ansible_playbook
   hosts: test-kitchen
   require_chef_omnibus: false
-  requirements_path: requirements.txt
   require_chef_for_busser: false
   require_ruby_for_busser: true
+  requirements_path: requirements.txt
 
 platforms:
   - name: ubuntu-14.04
