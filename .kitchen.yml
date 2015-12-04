@@ -17,5 +17,5 @@ platforms:
 suites:
   - name: default
 
-# verifier:
-#   ruby_bindir: '/usr/bin'
+verifier:
+  ruby_bindir: '/usr/bin'
