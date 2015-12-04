@@ -7,7 +7,7 @@ describe 'ansible-ruby::default' do
   end
 
   describe package('ruby2.2-dev') do
-    it { should be_installed.by('apt') }
+    it { should be_installed.by('gem') }
   end
 
   describe package('bundler') do
