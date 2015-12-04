@@ -2,14 +2,14 @@
 - hosts: test-kitchen
   remote_user: root
 
-  pre_tasks:
-    - name: Build Essential
-      apt:
-        name: "{{ item }}"
-      with_items:
-        - build-essential
-        - gcc
-        - zlib1g-dev
+  # pre_tasks:
+  #   - name: Build Essential
+  #     apt:
+  #       name: "{{ item }}"
+  #     with_items:
+  #       - build-essential
+  #       - gcc
+  #       - zlib1g-dev
 
   roles:
     - role: ansible-ruby
